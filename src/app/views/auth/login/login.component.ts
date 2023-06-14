@@ -40,10 +40,12 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log('onSubmit run');
     // stop here if form is invalid
     if (!this.loginForm || this.loginForm.invalid) {
       return;
     }
+    
     //recupere les champs
     let email = this.loginForm.get('email')?.value;
     let pass = this.loginForm.get('password')?.value;

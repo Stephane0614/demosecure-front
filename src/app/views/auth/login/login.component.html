@@ -18,8 +18,8 @@
                       </ion-item>
 
                       <div class="ion-text-center">
-                          <ion-button type="submit" color="primary" [disabled]="submitted">
-                              <span *ngIf="submitted">
+                          <ion-button *ngIf="loginForm.valid " type="submit" color="primary"  (click)="onSubmit()">
+                              <span >
                                       <ion-spinner color="primary"></ion-spinner>
                                   </span> Connexion
                           </ion-button>
